@@ -1,30 +1,33 @@
-Live News RAG Bot
+📰 Live News RAG Bot
 Dynamic Retrieval-Augmented Generation for Real-Time News
-Overview
+
+DataQuest 2026 – IIT Kharagpur Hackathon
+
+🚀 Overview
 
 Live News RAG Bot is a real-time AI system that answers user questions using only the latest news data.
-It automatically refreshes its knowledge every 60 seconds without restarting and proves “Live AI” behavior.
-Built for DataQuest 2026 – IIT Kharagpur Hackathon.
+It refreshes its knowledge automatically every 60 seconds and proves true “Live AI” behavior.
+Built specially for DataQuest 2026 – IIT Kharagpur Hackathon.
 
-What This Project Does -
+🎯 What This Project Does
 
 Fetches live news from NewsAPI
-Updates data automatically within every 60 seconds
-Answers only from the latest data
+Auto-updates data every 60 seconds
+Answers only from latest data
 Says “Not found in current news” if answer is not present
-Logs every update with timestamp for proof
-Demonstrates Dynamic RAG + Live AI concept
+Logs every refresh with timestamp for proof
+Demonstrates Dynamic RAG + Live AI
 
-Key Features
+✨ Key Features
 
-Live data ingestion
-Background auto-refresh
-Retrieval-Augmented Generation (RAG)
-Update logging for demo proof
-Simple CLI interface
-Hackathon-ready structure
+🔄 Live data ingestion
+⏱ Background auto-refresh
+🧠 Retrieval-Augmented Generation (RAG)
+🧾 Update logging for demo proof
+💻 Simple CLI interface
+🏆 Hackathon-ready structure
 
-Tech Stack
+🛠 Tech Stack
 
 Python
 NewsAPI
@@ -32,74 +35,96 @@ Gemini API
 Requests
 python-dotenv
 
-Project Structure
+📁 Project Structure
 live-news-project/
 │
-├── main.py        # Main live loop
-├── news.py        # Fetches live news
-├── rag.py         # RAG logic using LLM
-├── logger.py      # Logs updates
-├── update_log.txt # Auto-generated log
-├── demo/          # Screenshots / demo proof
-├── .env           # API keys (not pushed to GitHub)
-└── README.md
+├── main.py         # Main live loop
+├── news.py         # Fetches live news
+├── rag.py          # RAG logic using LLM
+├── logger.py       # Logs updates
+├── update_log.txt  # Auto-generated log
+├── demo/           # Screenshots / demo proof
+├── requirements.txt
+├── README.md
+└── .env            # API keys (NOT pushed to GitHub)
 
-How It Works
+⚙️ How It Works
 
 News is fetched from NewsAPI
-System refreshes data every 60 seconds automatically
+Data refreshes automatically every 60 seconds
 User can ask unlimited questions anytime
 AI answers only from current news
 Every refresh is logged with timestamp
+“Live AI” behavior is clearly demonstrated
 
-Setup Instructions
-1. Create Virtual Environment
+🧪 Example Remains True
+Question	Result
+What happened in sports today?	Answered from news
+What is latest world news?	Answered from news
+Who is the president of India?	❌ Not found in current news
+
+This is correct behavior — not a general chatbot.
+
+🔧 Setup Instructions
+1️⃣ Create Virtual Environment
 python -m venv venv
 venv\Scripts\activate
 
-2. Install Dependencies
-pip install requests python-dotenv google-genai
+2️⃣ Install Dependencies
+pip install -r requirements.txt
 
-3. Create .env File
+3️⃣ Create .env File
 NEWS_API_KEY=your_newsapi_key
 GEMINI_API_KEY=your_gemini_api_key
 
-4. Run Project
+4️⃣ Run Project
 python main.py
 
-Demo Proof Method
+🎥 Demo Proof Method
 
+To prove “Live AI”:
 Start program
-Ask a question
-Wait 60–120 seconds
-System refreshes automatically
-Ask same question again
-Answer changes if news changed
-Open update_log.txt to show timestamps
-This proves real-time behavior.
-
-Example Questions
-
-What happened in sports today?
+Ask:
 
 What is the latest world news?
 
-What news is related to conflict?
+Take screenshot → demo/demo1_start.png
 
-Who is the president of India?
-→ Should return “Not found in current news”
+Wait 60 seconds
+Ask same question again
+Screenshot → demo/demo2_after_refresh.png
+Open update_log.txt and screenshot → demo/demo3_log.png
 
-Hackathon Alignment
+This proves real-time behavior.
+
+🧠 Hackathon Alignment
 
 This project satisfies DataQuest 2026 requirements:
-Dynamic data source
-Live updates
-RAG pipeline
-Real-time behavior proof
-Production-style structure
+✅ Dynamic data source
+✅ Live updates
+✅ RAG pipeline
+✅ Real-time behavior proof
+✅ Production-style structure
 
-Author
+📈 Current Progress
+
+Core RAG system: ✅
+Live refresh: ✅
+Logging proof: ✅
+Demo evidence: ✅
+GitHub + README: ✅
+Project is hackathon-ready.
+
+🔮 Future Work (Pathway Integration)
+
+Next planned upgrade:
+Integrate Pathway streaming engine
+Replace timer-based refresh with event-driven streaming
+Add vector indexing with Pathway
+Real-time document ingestion from files/APIs
+
+👨‍💻 Author
 
 Arijit Sen
-DataQuest 2026 Participant
 ECE Student
+Participant – DataQuest 2026
